@@ -2,4 +2,4 @@ language: php
 install:
   - sudo apt install sshpass
 script:
-  - sshpass -p "$SSH_PWD" scp -o StrictHostKeyChecking=no -p $SSH_PWD -r . $SSH_LOGIN@$SSH_IP:/var/www/html
+  - sshpass -p "$SSH_PWD" scp -o StrictHostKeyChecking=no -p $SSH_PWD -P $SSH_PORT -r . $SSH_LOGIN@$SSH_IP:/var/www/html
