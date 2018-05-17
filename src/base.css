@@ -1,0 +1,65 @@
+.box {
+  float: left;
+  position : relative;
+  width: 23%;
+  padding-left: 2%;
+}
+
+.page {
+  background: #fdfff4;
+}
+.menu_p{
+  display: inline-block;
+   vertical-align: top;
+   padding-left: 0%;
+
+}
+.title {
+  background: #335393;
+  height: 40px;
+  text-align: center;
+}
+
+.content {
+  background: #3896e2;
+}
+
+.pannel {
+  margin-top: 2% ;
+  margin-right: 2%;
+  overflow: auto;
+}
+
+.menu{
+  font-family: sans-serif;
+  padding-left: 2%;
+  width: 100%;
+  display: table;
+  background: #335393;
+}
+
+.menu_left{
+  display: inline;
+  float:left;
+  width: 15%;
+}
+
+.menu_right{
+  display: inline;
+  float:right;
+  width: 15%;
+
+}
+body{
+  margin:0px;
+}
+
+a {
+    text-decoration-line: none;
+    color:#ffffff;
+}
+
+ul {
+  margin:0px;
+  list-style-type: none;
+}
