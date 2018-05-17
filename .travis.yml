@@ -1,5 +1,5 @@
 language: php
 install:
-  - "sudo apt install sshpass"
-deploy:
-  - "sshpass -p "$SSH_PWD" scp -r . $SSH_LOGIN@$SSH_IP:/var/www/html" 
+  - sudo apt install sshpass
+script:
+  - sshpass -p "$SSH_PWD" scp -r . $SSH_LOGIN@$SSH_IP:/var/www/html
