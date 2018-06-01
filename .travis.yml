@@ -1,5 +1,11 @@
-language: php
-install:
-  - sudo apt install sshpass
-script:
-  - sshpass -p "$SSH_PWD" scp -o StrictHostKeyChecking=no -p $SSH_PWD -P $SSH_PORT -r . $SSH_LOGIN@$SSH_IP:/var/www/html
+deploy:
+  provider: s3
+  access_key_id: AKIAIUFHVCOL65HLT2HA
+  secret_access_key:
+    secure: tbcRduxlf9h33eB9n8gHkdmgkhnCQeVfXd7NkpnbU4AD7G4B3HSz+lSxYOOd6yoj9yusk4bthrCiqoDLIqXsVdrGXZkMj4N52Wwgt0aqypykND0+BTnWSliHD6DPp88bc8ASaVd4fUKma5z33H8Cj/jwTradJDq/aebONkrgC9rw9cNvWbTH6Q35qFRAriZ/y4bhiDkiunOzuXAg2SJPsGeWRudGzDDMQKAcTf68ry/oD91gLb5S/lSzAglW0FxgZBvpkHRM0rLu4GTScgIo7oVRZehCNJr1R3Ss+MbEpt7oDIQ6JroL/dlNOf70/K75UBaha+4IrUwlj85vjWp0228cFaz2pYnrysD3C4s9JJ6s/yeyW1OXbMMdvqOOj04UlG+m6d/YwsRBGaD4rBPjqwHbVbPxA8M+QOfoEQwIsCT9ZfP66aLjyk6QDITUDJxkGBpe+Jozmpnux8tizDU0tqnzHfVEW3kQWMcvBzkSzGnIsRQwMFNNuUyx6CIJ7r0aV3hrNDYu9qOaIIS/jFvEsrRBx49i5khvS5y0X3AfpakIxYl0cktGDk3+ihFDo6MQG+5jS7iY1AU1maFTu66xTFBHqNsbSNnf5fsbjnA5uiRyRsBHeEbrxUGzQhg3aT6j8fNitotj4jZYQomPbPnGGdOS7LmMbbJ8yr6M+ewlXe8=
+  bucket: fipa-static-html
+  local-dir: src
+  upload-dir: www
+  acl: ''
+  on:
+    repo: Lineals/Web
