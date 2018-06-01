@@ -9,6 +9,5 @@ deploy:
   bucket: fipa-static-html
   local-dir: src
   upload-dir: www
-  acl: ''
   on:
     repo: Lineals/Web
